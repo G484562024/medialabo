@@ -1,0 +1,32 @@
+p {
+    color:black;
+}
+
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+h1 + p {
+    font-size: 200%;
+  }
+
+  a:link {
+    color: pink;
+  }
+  
+  a:visited {
+    color: blue;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+
+  li em {
+    color: rebeccapurple;
+  }
+
+  h1 + p {
+    font-size: 200%;
+  }
