@@ -50,4 +50,21 @@ body {
   p {
     margin: 10px 0;
   }
+  /*検索ボックスUI調整*/
+  .search-box {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #ffffffcc;
+    border-radius: 6px;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-box label,
+  .search-box select,
+  .search-box button {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
   

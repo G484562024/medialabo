@@ -26,6 +26,17 @@ function printDom(data) {
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
+// 検索ボタンのイベントハンドラ登録（4回目だからまだ）
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBtn = document.getElementById("search-btn");
+  searchBtn.addEventListener("click", function () {
+    const genreSelect = document.getElementById("genre");
+    const genreValue = genreSelect.value;
+    const genreText = genreSelect.options[genreSelect.selectedIndex].text;
+
+    console.log(`検索キー: ${genreText}`);
+  });
+});
 
 
 
