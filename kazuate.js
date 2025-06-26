@@ -7,6 +7,20 @@ let gameOver = false;
 // ボタンにイベント登録
 document.getElementById("btn").addEventListener("click", hantei);
 
+document.addEventListener("keydown", function (event) {
+  const input = document.getElementById("num");
+  let value = parseInt(input.value) || 0;
+
+  if (["ArrowUp", "w", "W"].includes(event.key)) {
+    input.value = value + 1;
+  } else if (["ArrowDown", "s", "S"].includes(event.key)) {
+    input.value = value - 1;
+  }else if (event.key === "Enter") {
+    document.getElementById("btn").click(); // 回答ボタンをクリック
+  }
+});
+
+
 function hantei() {
   if (gameOver) {
     kaisu+=1;
