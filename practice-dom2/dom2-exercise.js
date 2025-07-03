@@ -15,4 +15,47 @@ let gakka = [
 ];
 
 //////////////// ここから下にプログラムを書きたそう!
+let count=false;
 
+let b = document.querySelector('button#show');
+b.addEventListener('click', show);
+
+function show(){
+	if(!count){
+    // 住所リスト作成
+    let u1 = document.createElement('ul');   
+    u1.setAttribute('style', 'margin: 0; padding: 0; list-style: none;');
+
+    let l = document.createElement('li');  
+    l.textContent = '八王子市館町';              
+    u1.insertAdjacentElement('beforeend', l); 
+
+    let p = document.querySelector('h2#addr');
+    p.insertAdjacentElement('afterend', u1);
+
+    // 学科リスト作成
+    let u2 = document.createElement('ul');   
+    u2.setAttribute('beforeend', l); ;
+
+    l = document.createElement('li'); 
+    l.textContent = '機械システム工学科'; 
+    u2.insertAdjacentElement('beforeend', l); 
+
+    l = document.createElement('li'); 
+    l.textContent = '電子システム工学科'; 
+    u2.insertAdjacentElement('beforeend', l); 
+
+    l = document.createElement('li'); 
+    l.textContent = '情報工学科'; 
+    u2.insertAdjacentElement('beforeend', l); 
+
+    l = document.createElement('li'); 
+    l.textContent = 'デザイン学科'; 
+    u2.insertAdjacentElement('beforeend', l); 
+
+    p = document.querySelector('h2#dept'); 
+    p.insertAdjacentElement('afterend', u2);
+
+	count=true;
+	}
+}

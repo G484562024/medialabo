@@ -21,8 +21,46 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  // すでに存在する result を削除
+  let old = document.getElementById("result");
+  if (old !== null) {
+    old.remove();
+  }
 
+  // div#result を新たに作成し、body に追加
+  const result = document.createElement("div");
+  result.id = "result";
+  document.body.appendChild(result);
+
+  const shops = data.results.shop;
+
+  for (let i = 0; i < shops.length; i++) {
+    const shop = shops[i];
+
+    const shopDiv = document.createElement("div");
+    shopDiv.className = "l";
+
+    // 店名見出し
+    const h2 = document.createElement("h2");
+    h2.textContent = `店舗名: ${shop.name}`;
+    result.appendChild(h2);
+
+    // 各情報のp要素
+    shopDiv.innerHTML = `
+      <p>ジャンル: ${shop.genre.name}</p>
+      <p>住所: ${shop.address}</p>
+      <p>アクセス: ${shop.access}</p>
+      <p>予算: ${shop.budget.name}</p>
+      <p>キャッチコピー: ${shop.catch}</p>
+      <p>サブジャンル: ${shop.sub_genre.name}</p>
+      <p>最寄駅: ${shop.station_name}</p>
+      <p>営業時間: ${shop.open}</p>
+    `;
+
+    result.appendChild(shopDiv);
+  }
 }
+
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
