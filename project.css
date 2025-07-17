@@ -68,3 +68,38 @@ body {
     margin-right: 10px;
   }
   
+  /* ページナビゲーション全体 */
+.page-nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 20px;
+  background-color: #fef5e7;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border-left: 4px solid #cfa97e;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  color: #3c2a1e;
+}
+
+/* ページ操作ボタン */
+.page-nav button {
+  background-color: #d8ebcc;
+  color: #4a3a2b;
+  border: 1px solid #bfa58c;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.page-nav button:hover {
+  background-color: #c6efaa;
+}
+
+/* ページ範囲表示やヒット件数 */
+.page-nav span {
+  font-weight: bold;
+}
